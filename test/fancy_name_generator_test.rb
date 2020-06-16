@@ -1,9 +1,9 @@
 require "minitest/autorun"
 require "minitest/pride"
 require "mocha/minitest"
-require "./lib/name_generator"
+require "./lib/fancy_name_generator"
 
-class NameGeneratorTest < MiniTest::Test
+class FancyNameGeneratorTest < MiniTest::Test
 
   def setup
     @name1 = "Hrafnhildur"
@@ -16,12 +16,12 @@ class NameGeneratorTest < MiniTest::Test
   end
 
   def test_it_exists
-    name_generator = NameGenerator.new(@names)
-    assert_instance_of NameGenerator, name_generator
+    name_generator = FancyNameGenerator.new(@names)
+    assert_instance_of FancyNameGenerator, name_generator
   end
 
   def test_it_has_attributes
-    name_generator = NameGenerator.new(@names)
+    name_generator = FancyNameGenerator.new(@names)
     assert_equal @names, name_generator.names
     assert_nil name_generator.first_name
     assert_nil name_generator.second_name
@@ -30,7 +30,7 @@ class NameGeneratorTest < MiniTest::Test
   end
 
   def test_it_can_pick_four_names_randomly
-    name_generator = NameGenerator.new(@names)
+    name_generator = FancyNameGenerator.new(@names)
     names = name_generator.pick_four
 
     assert_instance_of Array, names
@@ -40,7 +40,7 @@ class NameGeneratorTest < MiniTest::Test
   end
 
   def test_it_can_add_names_stub
-    name_generator = NameGenerator.new(@names)
+    name_generator = FancyNameGenerator.new(@names)
     name_generator.stubs(:pick_four).returns(["Haskell", "Ruby", "Elixir", "JavaScript"])
 
     name_generator.add_names
@@ -52,7 +52,7 @@ class NameGeneratorTest < MiniTest::Test
   end
 
   def test_it_can_add_names_no_stub
-    name_generator = NameGenerator.new(@names)
+    name_generator = FancyNameGenerator.new(@names)
 
     name_generator.add_names
 
@@ -68,10 +68,10 @@ class NameGeneratorTest < MiniTest::Test
   end
 
   def test_it_can_make_a_full_name
-    name_generator = NameGenerator.new(@names)
+    name_generator = FancyNameGenerator.new(@names)
     name_generator.expects(:pick_four).returns(["Haskell", "Ruby", "Elixir", "JavaScript"])
 
-    assert_equal "Haskell Ruby Elixir JavaScript", name_generator.full_name
+    assert_equal "Ruby Jaskelte-HavaScripl", name_generator.full_name
   end
 
 end

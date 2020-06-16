@@ -19,5 +19,5 @@ class OuterSpaceNameGenerator < NameGenerator
     "#{@third_name[-1]}" +
     "#{@fourth_name[-1]}"
   end
-  
+
 end

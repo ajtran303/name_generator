@@ -26,16 +26,6 @@ class NameGenerator
 
   def full_name
     add_names
-
-    "#{@second_name} " +
-
-    "#{@fourth_name[0]}" +
-    "#{@first_name[1..-2]}" +
-    "#{@fourth_name[-1]}" +
-    "#{@third_name[0].downcase}-" +
-
-    "#{@first_name[0]}" +
-    "#{@fourth_name[1..-2]}" +
-    "#{@first_name[-1]}"
+    "#{@first_name} #{@second_name} #{@third_name} #{@fourth_name}"
   end
 end
