@@ -1,4 +1,4 @@
-#Name Generator
+# Name Generator
 
 A command line utility to generate names.
 
