@@ -6,11 +6,19 @@ A command line utility to generate names.
 
 Clone down and `cd` into the repo.
 
-Use the CLI to pick from `fancy_names` and `space_names`.
+Use the CLI to pick from `names`, `fancy_names`, and `space_names`.
 
-You can specify how many names you need. The default is one name.
+You can optionally specify how many names you need.
 
 ```
+$ ruby ./lib/names.rb
+Lonhyn Lievaart Dan Emily
+
+$ ruby ./lib/names.rb 2
+Duane Caleb Wendi Olof
+Kusum Don Jean Jun
+
+
 $ ruby ./lib/fancy_names.rb
 Irfan Ceyd-Kinde
 
