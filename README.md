@@ -37,3 +37,7 @@ Ve-Jh Ht'jeh
 Mr-Sd Nb'srn
 Ri-Tc Ek'tie
 ```
+
+## Attribution
+
+I used data from the FreeBSD `propernames` document, found at `/usr/share/dict`.
