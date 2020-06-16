@@ -11,27 +11,27 @@ Use the CLI to pick from `names`, `fancy_names`, and `space_names`.
 You can optionally specify how many names you need.
 
 ```
-$ ruby ./lib/names.rb
+$ ruby ./run/names.rb
 Lonhyn Lievaart Dan Emily
 
-$ ruby ./lib/names.rb 2
+$ ruby ./run/names.rb 2
 Duane Caleb Wendi Olof
 Kusum Don Jean Jun
 
 
-$ ruby ./lib/fancy_names.rb
+$ ruby ./run/fancy_names.rb
 Irfan Ceyd-Kinde
 
-$ ruby ./lib/fancy_names.rb 3
+$ ruby ./run/fancy_names.rb 3
 Dustin Sarmodv-Hanann
 Knute Ditalynngc-Roue
 Ramneek Ploytj-Fied
 
 
-$ ruby ./lib/space_names.rb
+$ ruby ./run/space_names.rb
 Se-Jj Es'jee
 
-$ ruby ./lib/space_names.rb 4
+$ ruby ./run/space_names.rb 4
 Ba-Tv Yd'tay
 Ve-Jh Ht'jeh
 Mr-Sd Nb'srn
