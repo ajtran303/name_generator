@@ -1,19 +1,10 @@
 require "./lib/outer_space_name_generator"
 require "./lib/names_service"
 
-location = "./data/names.txt"
+service = NamesService.new("./data/names.txt")
+names = service.names
 
-amount = ARGV[0]
-amount ||= 1
-
-amount.to_i.times do
-
-  service = NamesService.new(location)
-  names = service.names
-
-  generator = OuterSpaceNameGenerator.new(names)
-  space_name = generator.full_name
-
-  puts space_name
-
+(ARGV[0] || 1).to_i.times do
+  generator = OuterSpaceNameGenerator.new(names.sample(4))
+  puts generator.full_name
 end
