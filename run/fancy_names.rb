@@ -1,19 +1,10 @@
 require "./lib/fancy_name_generator"
 require "./lib/names_service"
 
-location = "./data/names.txt"
+service = NamesService.new("./data/names.txt")
+names = service.names
 
-amount = ARGV[0]
-amount ||= 1
-
-amount.to_i.times do
-
-  service = NamesService.new(location)
-  names = service.names
-
-  generator = FancyNameGenerator.new(names)
-  fancy_name = generator.full_name
-
-  puts fancy_name
-
+(ARGV[0] || 1).to_i.times do
+  generator = FancyNameGenerator.new(names.sample(4))
+  puts generator.full_name
 end
