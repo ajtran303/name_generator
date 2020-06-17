@@ -61,10 +61,10 @@ class NameGeneratorTest < MiniTest::Test
     refute_nil name_generator.third_name
     refute_nil name_generator.fourth_name
 
-    assert_equal true, @names.include?(name_generator.first_name)
-    assert_equal true, @names.include?(name_generator.second_name)
-    assert_equal true, @names.include?(name_generator.third_name)
-    assert_equal true, @names.include?(name_generator.fourth_name)
+    assert_includes @names, name_generator.first_name
+    assert_includes @names, name_generator.second_name
+    assert_includes @names, name_generator.third_name
+    assert_includes @names, name_generator.fourth_name
   end
 
   def test_it_can_make_a_full_name
