@@ -7,10 +7,6 @@ class NameGenerator
 
   def initialize(names)
     @names = names
-    @first_name = nil
-    @second_name = nil
-    @third_name = nil
-    @fourth_name = nil
   end
 
   def pick_four
