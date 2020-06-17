@@ -6,13 +6,8 @@ require "./lib/fancy_name_generator"
 class FancyNameGeneratorTest < MiniTest::Test
 
   def setup
-    @name1 = "Hrafnhildur"
-    @name2 = "Ruby"
-    @name3 = "JavaScript"
-    @name4 = "Python"
-    @name5 = "Haskell"
-    @name6 = "Elixir"
-    @names = [@name1, @name2, @name3, @name4, @name5, @name6]
+    @names =
+      ["Hrafnhildur", "Ruby", "JavaScript", "Python", "Haskell", "Elixir"]
   end
 
   def test_it_exists
