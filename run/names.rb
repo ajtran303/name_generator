@@ -1,9 +1,6 @@
 require "./lib/name_generator"
-require "./lib/names_service"
 
-service = NamesService.new("./data/names.txt")
-generator = NameGenerator.new(service.names)
+names = File.readlines("./data/names.txt", chomp: true)
+amount = (ARGV[0] || 1).to_i
 
-(ARGV[0] || 1).to_i.times do
-  puts generator.full_name
-end
+puts NameGenerator.generate(names, amount)

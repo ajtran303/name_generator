@@ -10,6 +10,14 @@ class NameGeneratorTest < MiniTest::Test
       ["Hrafnhildur", "Ruby", "JavaScript", "Python", "Haskell", "Elixir"]
   end
 
+  def test_its_class_can_generate_name
+    NameGenerator.stubs(:generate).returns("Hrafnhildur Ruby JavaScript Python")
+
+    name = NameGenerator.generate(@names)
+
+    assert_equal name, "Hrafnhildur Ruby JavaScript Python"
+  end
+
   def test_it_exists
     name_generator = NameGenerator.new(@names)
     assert_instance_of NameGenerator, name_generator

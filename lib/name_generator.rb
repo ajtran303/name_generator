@@ -5,6 +5,13 @@ class NameGenerator
               :fourth_name,
               :names
 
+  def self.generate(names, amount)
+    generator = new(names)
+    names = []
+    amount.times { names << generator.full_name }
+    names
+  end
+
   def initialize(names)
     @names = names
   end
